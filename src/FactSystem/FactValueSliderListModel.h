@@ -17,7 +17,7 @@
 class FactValueSliderListModel : public QAbstractListModel
 {
     Q_OBJECT
-    
+
 public:
     FactValueSliderListModel(Fact& fact, QObject* parent = nullptr);
     ~FactValueSliderListModel();
@@ -29,16 +29,15 @@ public:
 
     Q_INVOKABLE int resetInitialValue(void);
     Q_INVOKABLE double valueAtModelIndex(int index);
-    Q_INVOKABLE int valueIndexAtModelIndex(int index);
 
 signals:
     void initialValueAtPrecisionChanged(void);
 
 private:
-    double _valueAtPrecision(double value) const;
+    double _valueAtPrecision(double value, int decimalPlaces) const;
 
     // Overrides from QAbstractListModel
-    int	rowCount(const QModelIndex & parent = QModelIndex()) const override;
+    int rowCount(const QModelIndex & parent = QModelIndex()) const override;
     QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames(void) const override;
 
@@ -54,5 +53,4 @@ private:
     double  _increment;
 
     static const int _valueRole;
-    static const int _valueIndexRole;
 };

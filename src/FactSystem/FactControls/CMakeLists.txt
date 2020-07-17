@@ -4,15 +4,15 @@ add_library(FactControls
 
 add_custom_target(FactControlsQml
     SOURCES
-    AltitudeFactTextField.qml  
-    FactCheckBox.qml  
-    FactLabel.qml          
-    FactTextField.qml     
+    AltitudeFactTextField.qml
+    FactCheckBox.qml
+    FactLabel.qml
+    FactTextField.qml
     FactTextFieldSlider.qml
-    FactBitmask.qml            
-    FactComboBox.qml  
-    FactTextFieldGrid.qml  
-    FactTextFieldRow.qml  
+    FactBitmask.qml
+    FactComboBox.qml
+    FactTextFieldGrid.qml
+    FactTextFieldRow.qml
     FactValueSlider.qml
 )
 
